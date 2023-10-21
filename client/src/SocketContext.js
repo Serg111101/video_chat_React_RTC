@@ -2,9 +2,13 @@ import { createContext, useContext, useState, useRef, useEffect } from "react";
 import { io } from 'socket.io-client'
 import Peer from 'simple-peer'
 
+const BASE_URL = process.env.REACT_APP_BASE_URL
+
 const SocketContext = createContext()
 
-const socket = io('http://localhost:5000/')
+
+// const socket = io('http://localhost:5000/')
+const socket = io(BASE_URL)
 
 function useProvideContext() {
     const [stream, setStream] = useState(null)

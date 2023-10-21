@@ -4,7 +4,7 @@ const server = require('http').createServer(app)
 const cors = require('cors')
 app.use(cors())
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT 
 
 app.get('/', (req, res) => {
     res.send('HELLO SERVER')
